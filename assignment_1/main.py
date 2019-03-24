@@ -36,7 +36,6 @@ Arguments : x ---> new input point
 '''
 g1, g2 = function(x_point, xvec1, xvec2, w1, w2)
 
-
 # classifying the input point
 '''
 Class : classify()
@@ -44,7 +43,6 @@ Arguments : g1 : discriminant value received for class1
             g2 : discriminant value received for class2
 '''
 g = classify(g1, g2)
-
 
 # plotting the decision boundary
 '''
@@ -54,4 +52,3 @@ Arguments : x_point ---> new input point
               xvec2 ---> class2 points
 '''
 scatter_plot(x_point, xvec1, xvec2, w1, w2)
-

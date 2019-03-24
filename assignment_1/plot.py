@@ -37,8 +37,14 @@ def scatter_plot(x_point, xvec1, xvec2, w1, w2):
     # scatter plot
     plt.scatter(plot_class1[:, 0], plot_class1[:, 1], c="yellow")
     plt.scatter(plot_class2[:, 0], plot_class2[:, 1], c="orange")
-    plt.scatter(x_point[0], x_point[1], c="black")
-    plt.scatter(xvec1[:, 0], xvec1[:, 1], c="green")
-    plt.scatter(xvec2[:, 0], xvec2[:, 1], c="red")
+    plt.scatter(x_point[0], x_point[1], c="black", label = "input")
+    plt.scatter(xvec1[:, 0], xvec1[:, 1], c="green", label = "class1")
+    plt.scatter(xvec2[:, 0], xvec2[:, 1], c="red", label = "class2")
     plt.hlines(y=0, xmin=-1, xmax=8, linestyles='dashed')
     plt.vlines(x=0, ymin=-6, ymax=11, linestyles='dashed');
+    plt.title("Decision Boundary")
+    plt.xlabel("x coordinate")
+    plt.ylabel("y coordinate")
+    plt.legend(loc='upper right')
+    plt.show()
+    
