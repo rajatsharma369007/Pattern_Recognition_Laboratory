@@ -2,9 +2,12 @@
 This script is for training the model and prediction
 '''
 
+# importing libraries
 import random
 import numpy as np
 
+
+# train method
 def train(X, y, epoch, learning_rate):
     weight = np.array([random.randint(-2, 2), random.randint(-2, 2), random.randint(-2, 2)])
     
@@ -26,13 +29,14 @@ def train(X, y, epoch, learning_rate):
         print('accuracy : ', (correct/len(y))*100)    
     return weight
 
-
+# predict method
 def predict(model, X):
     output = model[0] + model[1]*X[0] + model[2]*X[1]
     signD = activation(output)
     return signD
-    
-    
+        
+
+# activation method
 def activation(x):
     if(x >= 0):
         signD = -1
