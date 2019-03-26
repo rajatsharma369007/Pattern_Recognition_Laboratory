@@ -27,8 +27,22 @@ output = predict(model, X_new)
 
 print("gate output : ",output)
 
+'''
+for AND gate
+'''
+# splitting the data
+X, y = read_data("../dataset/AND.xlsx")
 
+# training the model
+model = train(X, y, 10, 1)
 
+# user input
+x1 = int(input("Enter x1 value : "))
+x2 = int(input("Enter x2 value : "))
+X_new = np.array([x1, x2])
 
+# prediction
+output = predict(model, X_new)
 
+print("gate output : ",output)
 
