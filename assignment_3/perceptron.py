@@ -5,15 +5,14 @@ algorithm
 
 # importing libraries
 import numpy as np
-from read_dataset import read_data
-from model import train, predict
+from utils import read_dataset
+from utils import model
 
 '''
 for OR gate 
 '''
 # splitting the data
-X, y = read_data("../dataset/OR.xlsx")
-
+X, y = read_dataset.read_data("../dataset/OR.xlsx")
 
 # training the model
 '''
@@ -24,8 +23,9 @@ Arguments : X ---> input vector
             learning_rate
 Output : weights of the model
 '''
-model = train(X, y, epoch=10, learning_rate=1)
+model1 = model.train(X, y, epoch=10, learning_rate=1)
 
+##############################################################################
 
 # user input
 x1 = int(input("Enter x1 value : "))
@@ -39,15 +39,16 @@ Class : predict()
 Arguments : model ---> weight of the model
             X_new ---> verification input
 '''
-output = predict(model, X_new)
+output = model.predict(model1, X_new)
 print("gate output : ",output)
 
+##############################################################################
 
 '''
 for AND gate
 '''
 # splitting the data
-X, y = read_data("../dataset/AND.xlsx")
+X, y = read_dataset.read_data("../dataset/AND.xlsx")
 
 
 # training the model
@@ -59,8 +60,9 @@ Arguments : X ---> input vector
             learning_rate
 Output : weights of the model
 '''
-model = train(X, y, epoch=10, learning_rate=1)
+model2 = model.train(X, y, epoch=10, learning_rate=1)
 
+##############################################################################
 
 # user input
 x1 = int(input("Enter x1 value : "))
@@ -74,6 +76,6 @@ Class : predict()
 Arguments : model ---> weight of the model
             X_new ---> verification input
 '''
-output = predict(model, X_new)
+output = model.predict(model2, X_new)
 print("gate output : ",output)
 
