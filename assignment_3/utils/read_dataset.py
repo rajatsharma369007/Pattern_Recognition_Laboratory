@@ -16,3 +16,15 @@ def read_data(pathname):
     
     return X, D_desired
     
+
+def read_iris(pathname):
+    # reading dataset
+    df = pd.read_csv(pathname)
+    # for 2 category
+    X_df = df[0:100][['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
+    X = np.array(X_df)
+    y_df = df[0:100]['Species']
+    y = np.array(pd.get_dummies(y_df, drop_first=True))
+    
+    return X, y
+    

@@ -1,7 +1,7 @@
 # importing libraries
-import box_muller
-import marsaglia_polar
-import plotting
+from utils import box_muller
+from utils import marsaglia_polar
+from utils import plot
 
 # no. of samples
 n_samples = 10000
@@ -26,7 +26,7 @@ Arguments : x ---> random variable X
      bin_size ---> width span of each bar
         label ---> xlabel
 '''
-plotting.histogram(x, y, 20, "Box-Muller Method")
+plot.histogram(x, y, 20, "Box-Muller Method")
 
 
 '''
@@ -48,7 +48,7 @@ Arguments : w ---> random variable X
      bin_size ---> width span of each bar
         label ---> xlabel
 '''
-plotting.histogram(w, z, 20, "Marsaglia Polar Method")
+plot.histogram(w, z, 20, "Marsaglia Polar Method")
 
 
 
