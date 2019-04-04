@@ -49,7 +49,6 @@ def step_function(x):
 def train_irismodel(X_train, y_train, epochs, learnrate, n_hidden):
     # no. of rows, no. of columns
     n_records, n_features = X_train.shape
-    last_loss = None
     
     # initializing the size of weight vectors
     weights_input_hidden = np.random.normal(scale = 1 / n_features ** 0.5, size = (n_features, n_hidden))
@@ -113,5 +112,8 @@ def predict_irismodel(X_test, y_test, model):
     accuracy = np.mean(predictions == y_test)
     print("testing accuracy: ", accuracy)
     return predictions
+
+
+
     
 

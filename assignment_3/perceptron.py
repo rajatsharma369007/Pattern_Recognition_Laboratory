@@ -40,7 +40,7 @@ Arguments : model ---> weight of the model
             X_new ---> verification input
 '''
 output = model.predict(model1, X_new)
-print("gate output : ",output)
+print("OR gate output : ",output)
 
 ##############################################################################
 
@@ -64,12 +64,6 @@ model2 = model.train(X, y, epoch=10, learning_rate=1)
 
 ##############################################################################
 
-# user input
-x1 = int(input("Enter x1 value : "))
-x2 = int(input("Enter x2 value : "))
-X_new = np.array([x1, x2])
-
-
 # prediction
 '''
 Class : predict()
@@ -77,5 +71,5 @@ Arguments : model ---> weight of the model
             X_new ---> verification input
 '''
 output = model.predict(model2, X_new)
-print("gate output : ",output)
+print("AND gate output : ",output)
 
