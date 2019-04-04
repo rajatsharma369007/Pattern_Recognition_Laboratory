@@ -8,4 +8,6 @@ This repository contains all the laboratory work and assignment
 * Generating values from normal distribution [Link](https://github.com/rajatsharma369007/Pattern_Recognition_Laboratory/tree/master/assignment_2)  
   <img src="https://github.com/rajatsharma369007/Pattern_Recognition_Laboratory/blob/master/assignment_2/output.png" width=500px/>  
   
-* Neural Network for OR and AND gate models [Link](https://github.com/rajatsharma369007/Pattern_Recognition_Laboratory/tree/master/assignment_3)  
+* Neural Network for OR and AND gate models [Link](https://github.com/rajatsharma369007/Pattern_Recognition_Laboratory/tree/master/assignment_3)    
+
+* Classification over Iris dataset | backpropagation [Link](https://github.com/rajatsharma369007/Pattern_Recognition_Laboratory/tree/master/assignment_3)  
