@@ -4,18 +4,8 @@ This script helps in reading the dataset
 # importing libraries
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
-    
-# function for splitting data
-def read_data(pathname):
-    # reading dataset
-    df = pd.read_excel(pathname)
-    
-    # X vector and d label
-    X = np.array(df[['x1','x2']])
-    D_desired = np.array(df[['D']])
-    
-    return X, D_desired
     
 
 def read_irisdata(pathname):
@@ -25,6 +15,9 @@ def read_irisdata(pathname):
     # Make dummy variables for rank
     df = pd.concat([df, pd.get_dummies(df['Species'], drop_first=True)], axis=1)
     df = df.drop(['Id','Species'], axis=1)
+    
+    # dataset analysis
+    sns.pairplot(df[['SepalLengthCm','SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']])
     
     # normalizing the values
     scaler = MinMaxScaler()
