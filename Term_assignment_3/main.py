@@ -29,8 +29,3 @@ arguments : X features, y label, iris_model
 '''
 predictions = model.predict_irismodel(X_test, y_test, iris_model)
 
-import matplotlib.pyplot as plt
-
-plt.scatter(X_train[:45][0], X_train[45:][0])
-
-
