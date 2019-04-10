@@ -1,3 +1,8 @@
+'''
+This script helps to calculate the discriminant function. This is part of 
+pattern recognition assignment-1b
+'''
+
 # importing Libraries
 import numpy as np
 from utils import read_dataset
@@ -5,7 +10,7 @@ from utils import discriminant
 from utils import plot
 
 # reading dataset
-path = "../dataset/data.xlsx"
+path = "/home/rajat/Documents/8th sem/Pattern_recognition/Pattern_Recognition_Laboratory/dataset/data.xlsx"
 
 '''
 Class : create_vector()

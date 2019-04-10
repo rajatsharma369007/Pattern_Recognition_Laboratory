@@ -1,7 +1,8 @@
 '''
-this is the fourth assignment of pattern recognition laboratory, implementing 
-backpropagation on iris dataset
+this script helps to demonstrate the backpropagation on iris dataset. To see the 
+model implementation checkout utils folder
 '''
+
 # importing libraries
 from utils import read_dataset
 from utils import model
@@ -27,4 +28,9 @@ function : predict_irismodel
 arguments : X features, y label, iris_model
 '''
 predictions = model.predict_irismodel(X_test, y_test, iris_model)
+
+import matplotlib.pyplot as plt
+
+plt.scatter(X_train[:45][0], X_train[45:][0])
+
 

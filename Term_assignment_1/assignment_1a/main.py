@@ -1,3 +1,8 @@
+'''
+This script helps in generating the random samples from a univariate normal 
+distribution. This is part of pattern recognition assignment-1a
+'''
+
 # importing libraries
 from utils import box_muller
 from utils import marsaglia_polar

@@ -14,5 +14,4 @@ def histogram(x, y, bin_size, label):
     plt.hist(y, bins = bin_size, color = "orange");
     plt.title("Gaussian Distribution (random variable Y)")
     plt.xlabel(label)
-    plt.show()
-
+plt.show()

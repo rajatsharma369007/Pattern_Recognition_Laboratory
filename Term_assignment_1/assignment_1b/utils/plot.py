@@ -5,7 +5,7 @@ This script helps to plot the decision boundary
 # importing Libraries
 import numpy as np
 import matplotlib.pyplot as plt
-from discriminant import function
+from utils import discriminant
 
 # plotting
 def scatter_plot(x_point, xvec1, xvec2, w1, w2):
@@ -24,7 +24,7 @@ def scatter_plot(x_point, xvec1, xvec2, w1, w2):
         for j in range((min_y-2) * 10 , ((max_y+2)+1) * 10):
             j = j * 0.1
             x = np.array([i, j])
-            g1, g2 = function(x, xvec1, xvec2, w1, w2)
+            g1, g2 = discriminant.function(x, xvec1, xvec2, w1, w2)
             if g1 - g2 > 0:                 # class 1 condition
                 plot_class1.append(x)
             else:                           # class 2 condition
