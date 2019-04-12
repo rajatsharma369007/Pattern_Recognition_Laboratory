@@ -5,19 +5,24 @@ This script helps in reading the dataset
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler
        
 
 def read_irisdata(pathname):
     # reading csv data
     df = pd.read_csv(pathname)
+    df = df.drop(['Id'], axis=1)
+    
+    # data analysis
+    g = sns.PairGrid(df, hue="Species")
+    g = g.map_diag(plt.hist)
+    g = g.map_offdiag(plt.scatter)
+    g = g.add_legend() 
 
     # Make dummy variables for rank
     df = pd.concat([df, pd.get_dummies(df['Species'], drop_first=True)], axis=1)
-    df = df.drop(['Id','Species'], axis=1)
-    
-    # dataset analysis
-    sns.pairplot(df[['SepalLengthCm','SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']])
+    df = df.drop(['Species'], axis=1)
     
     # normalizing the values
     scaler = MinMaxScaler()
